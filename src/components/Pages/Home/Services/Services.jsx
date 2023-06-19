@@ -1,0 +1,30 @@
+import React, { useEffect, useState } from 'react';
+import ServicesData from './ServicesData';
+
+const Services = () => {
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+      .then(res => res.json())
+    .then(data=> setServices(data))
+  },[])
+    return (
+      <div className="max-w-7xl mx-auto px-5 mt-24">
+        <div className="divider w-1/4 mx-auto"> Our Services </div>
+        <h1 className="text-center text-4xl font-bold">
+          You Take Growth For Business
+        </h1>
+        <p className="text-center text-lg mt-4">
+          Our strategy includes consistently evolving, to ensure we’re <br /> producing
+          exceptional SEO for business.
+        </p>
+        <div className="grid md:grid-cols-3 gap-10">
+          {
+            services.map(service => <ServicesData key={service._id} service={ service} />)
+          }
+        </div>
+      </div>
+    );
+};
+
+export default Services;
