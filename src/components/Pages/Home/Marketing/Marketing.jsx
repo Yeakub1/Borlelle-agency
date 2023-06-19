@@ -41,7 +41,7 @@ const Marketing = () => {
               </p>
             </div>
           </div>
-          <div data-aos="fade-down-left" className="md:w-1/2">
+          <div data-aos="fade-up-left" className="md:w-1/2">
             <LazyLoad offset={300}>
               <img src={images} alt="" />
             </LazyLoad>
