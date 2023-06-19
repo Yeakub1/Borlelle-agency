@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import banner from "../../../../assets/banner/banner.png";
 import Lottie from "lottie-react";
+import LazyLoad from "react-lazy-load";
 import Animation from "../../../../assets/animated/home.json";
 import Seo from "../../../../assets/animated/seo.json";
 import Analysis from "../../../../assets/animated/Analysis.json";
@@ -30,7 +31,10 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide className="relative">
-          <img src={banner} alt="" />
+          <LazyLoad height={762}>
+            <img src={banner} alt="" />
+          </LazyLoad>
+
           <div className="max-w-7xl px-5 mx-auto">
             <div className="max-w-7xl mx-auto absolute top-0 banner-text md:flex  justify-between items-center m-auto">
               <div className="md:w-1/2 text-white">
@@ -62,7 +66,9 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
-          <img src={banner} alt="" />
+          <LazyLoad height={762}>
+            <img src={banner} alt="" />
+          </LazyLoad>
           <div className="max-w-7xl px-5 mx-auto">
             <div className="max-w-7xl mx-auto absolute top-0 banner-text md:flex  justify-between items-center m-auto">
               <div className="md:w-1/2 text-white">
@@ -91,7 +97,9 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
-          <img src={banner} alt="" />
+          <LazyLoad height={762}>
+            <img src={banner} alt="" />
+          </LazyLoad>
           <div className="max-w-7xl px-5 mx-auto">
             <div className="max-w-7xl mx-auto absolute top-0 banner-text md:flex  justify-between items-center m-auto">
               <div className="md:w-1/2 text-white">
@@ -123,7 +131,9 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
-          <img src={banner} alt="" />
+          <LazyLoad height={762}>
+            <img src={banner} alt="" />
+          </LazyLoad>
           <div className="max-w-7xl px-5 mx-auto">
             <div className="max-w-7xl mx-auto absolute top-0 banner-text md:flex  justify-between items-center m-auto">
               <div className="md:w-1/2 text-white">
@@ -155,7 +165,9 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
-          <img src={banner} alt="" />
+          <LazyLoad height={762}>
+            <img src={banner} alt="" />
+          </LazyLoad>
           <div className="max-w-7xl px-5 mx-auto">
             <div className="max-w-7xl mx-auto absolute top-0 banner-text md:flex  justify-between items-center m-auto">
               <div className="md:w-1/2 text-white">
@@ -183,7 +195,9 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
-          <img src={banner} alt="" />
+          <LazyLoad height={762}>
+            <img src={banner} alt="" />
+          </LazyLoad>
           <div className="max-w-7xl px-5 mx-auto">
             <div className="max-w-7xl mx-auto absolute top-0 banner-text md:flex  justify-between items-center m-auto">
               <div className="md:w-1/2 text-white">

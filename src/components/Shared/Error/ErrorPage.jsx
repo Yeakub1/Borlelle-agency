@@ -6,7 +6,7 @@ const ErrorPage = () => {
         <>
           {/* component */}
           <section>
-            <div className="bg-black text-white">
+            <div className="bg-[#1A1958] text-white">
               <div className="flex h-screen">
                 <div className="m-auto text-center">
                   <div>
