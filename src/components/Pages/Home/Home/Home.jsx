@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Marketing from '../Marketing/Marketing';
 import SeoMarkting from '../Seo/SeoMarkting';
 import Services from '../Services/Services';
+import CountUps from '../CountUp/CountUp';
 
 const Home = () => {
     return (
@@ -10,7 +11,8 @@ const Home = () => {
             <Banner />
             <Marketing />
             <SeoMarkting />
-            <Services/>
+            <Services />
+           <CountUps/>
         </div>
     );
 };

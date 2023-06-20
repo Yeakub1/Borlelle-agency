@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const ServicesData = ({ service }) => {
@@ -18,8 +17,8 @@ const ServicesData = ({ service }) => {
           <p className=" mt-3">{Title}</p>
           <div className="flex justify-center">
             <Link to={`/details/${_id}`}>
-              <button className="px-6 mt-2 mb-4 py-2 bg-primary border-0 flex items-center gap-3 rounded-full text-white">
-                Details <FaLongArrowAltRight />
+              <button className="px-4 mt-2 mb-4 py-2 bg-primary border-0 flex items-center gap-3 rounded-full text-white hover:bg-black hover:text-white">
+                Read More.. 
               </button>
             </Link>
           </div>

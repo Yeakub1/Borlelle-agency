@@ -9,16 +9,11 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import logo from "../../../assets/logo/faveicon.png";
-// aso animation
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const Footer = () => {
-     useEffect(() => {
-       Aos.init();
-     }, []);
+    
   return (
-    <div data-aos="fade-up" data-aos-duration="3000"
+    <div 
       className="w-full bg-[#1A1958] text-white">
       <div className="">
         <footer className="mx-auto max-w-7xl mt-20 grid lg:grid-cols-4 px-4 justify-between footer py-10">
