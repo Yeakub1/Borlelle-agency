@@ -3,7 +3,7 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../components/Pages/Home/Home/Home";
 import ErrorPage from "../components/Shared/Error/ErrorPage";
 import SarvicesDetails from "../components/Pages/Home/Services/Details/SarvicesDetails";
-import About from "../components/Pages/AboutUs/About/About";
+import AboutUs from "../components/Pages/AboutUs/AboutUs/AboutUs";
 import ContactFrom from "../components/Pages/Contact/Contact";
 
 const router = createBrowserRouter([
@@ -23,15 +23,14 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/services/${params.id}`),
       },
       {
-        path: '/about',
-        element: <About/>
+        path: "/about",
+        element: <AboutUs />,
       },
-      
+
       {
-        path: '/contact',
-        element: <ContactFrom/>
+        path: "/contact",
+        element: <ContactFrom />,
       },
-      
     ],
   },
 ]);
