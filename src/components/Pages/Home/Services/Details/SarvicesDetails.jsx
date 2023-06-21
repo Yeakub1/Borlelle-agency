@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import banner from "../../../../../assets/images/details.png";
+import banner from "../../../../../assets/banner/details.png";
 import PageBanner from "../../../../Shared/PageBanner/PageBanner";
 
 const SarvicesDetails = () => {

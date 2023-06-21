@@ -70,14 +70,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className="mr-3" to="/contact">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link className="mr-3" to="/private">
-                private
-              </Link>
+              <ActiveLink to="/contact">Contact</ActiveLink>
             </li>
           </ul>
         </div>

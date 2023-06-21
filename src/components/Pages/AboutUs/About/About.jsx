@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../../../../assets/images/about.png'
+import banner from "../../../../assets/banner/about.png";
 import PageBanner from '../../../Shared/PageBanner/PageBanner';
 
 const About = () => {
