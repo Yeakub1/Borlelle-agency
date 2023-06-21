@@ -6,6 +6,12 @@ body{
 @tailwind components;
 @tailwind utilities;
 
+/* heade active link */
+.active{
+  color: purple;
+  font-weight: 600;
+}
+
 /* Swiper images slider */
 .swiper-slide img {
   width: 100%;
@@ -37,5 +43,5 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 30vh;
+  height: 40vh;
 }

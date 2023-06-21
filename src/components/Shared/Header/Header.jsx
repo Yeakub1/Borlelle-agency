@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo/Logo.png";
+import ActiveLink from "../../utility/ActiveLink/ActiveLink";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -58,14 +59,13 @@ const Header = () => {
         >
           <ul className="items-center justify-center text-lg space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li className="">
-              <Link to="/">Home</Link>
+              <ActiveLink to="/">Home</ActiveLink>
             </li>
             <li className="">
-              <Link to="/menu">menu</Link>
+              <ActiveLink to="/about">About</ActiveLink>
             </li>
-
             <li>
-              <Link className="mr-3" to="/shop">
+              <Link className="mr-3" to="/">
                 shop
               </Link>
             </li>

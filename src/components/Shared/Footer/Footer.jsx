@@ -13,62 +13,71 @@ import logo from "../../../assets/logo/faveicon.png";
 const Footer = () => {
     
   return (
-    <div 
-      className="w-full bg-[#1A1958] text-white">
+    <div className="w-full bg-[#1A1958] text-white">
       <div className="">
         <footer className="mx-auto max-w-7xl mt-20 grid lg:grid-cols-4 px-4 justify-between footer py-10">
           <div className="">
             <img className="w-40" src={logo} alt="" draggable="false" />
             <p className="text-lg">
-              Quisque quis dignissim elit. Aliquam et augue aliquet orci maximus
-              convallis id vitae augue. Phasellus elementum commodo aliquet.
+              Our approach to SEO is uniquely built around what we know
+              works…and what we know doesn’t work. With over 200 verified
+              factors in play.
             </p>
           </div>
           <div className="">
             {" "}
-            <span className="footer-title">Services</span>
+            <span className="footer-title">Useful Links</span>
             <a href="" className="text-lg ">
-              Home
+              About us
             </a>
             <a href="" className="text-lg ">
-              Instructors
+              Services
             </a>
             <a href="" className="text-lg ">
-              Classes
+              Projects
             </a>
             <a href="" className="text-lg ">
-              Login
+              Our Team
+            </a>
+            <a href="" className="text-lg ">
+              Contact Us
             </a>
           </div>
 
           <div className="">
-            <span className="footer-title uppercase ">Legal</span>
+            <span className="footer-title uppercase ">Our Service</span>
             <li href="" className="text-lg list-none">
-              Terms of use
+              SEO Optimization
             </li>
             <li href="" className="text-lg list-none">
-              Privacy policy
+              Content Marketing
             </li>
             <li href="" className="text-lg list-none">
-              Cookie policy
+              Enterprise SEO
+            </li>
+            <li href="" className="text-lg list-none">
+              National SEO
+            </li>
+            <li href="" className="text-lg list-none">
+              International SEO
             </li>
           </div>
           <div className="">
             <span className="footer-title">CONTACT INFO</span>
-            <li href="" className="text-lg flex">
+            <li href="" className="text-lg flex items-center">
               <p className="text-slate-500 mr-3">
                 <FaMapMarkerAlt />
               </p>{" "}
               <p>Dhaka, Bangladesh</p>
             </li>
-            <li href="" className="text-lg flex">
+            <li href="" className="text-lg flex items-center">
               <p className="text-slate-500 mr-3">
                 {" "}
                 <FaPhoneAlt />
               </p>{" "}
               <p>01308445892</p>
             </li>
-            <li href="" className="text-lg flex">
+            <li href="" className="text-lg flex items-center">
               <p className="text-slate-500 mr-3">
                 <FaEnvelope />
               </p>{" "}

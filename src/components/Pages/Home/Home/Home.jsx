@@ -12,7 +12,7 @@ const Home = () => {
             <Marketing />
             <SeoMarkting />
             <Services />
-           <CountUps/>
+            <CountUps />
         </div>
     );
 };
