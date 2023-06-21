@@ -75,10 +75,9 @@ const ContactFrom = () => {
           </label>
           <textarea
             {...register("message", { required: true })}
-            cols="141"
             rows="10"
             placeholder="Message"
-            className="rounded-md px-3 "
+            className="rounded-md px-3 w-full "
           ></textarea>
           {errors.message && (
             <span className="text-red-800">Message is required</span>
