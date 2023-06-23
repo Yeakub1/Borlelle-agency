@@ -4,9 +4,10 @@ import signupAnimation from "../../assets/animated/signup.json";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import { toast } from "react-hot-toast";
-import { AuthContext } from "../../Provider/AuthProvider";
+// import { collectUsers } from "../../Hooks/User";
 
 const Signup = () => {
   const {
@@ -29,8 +30,15 @@ const Signup = () => {
     console.log(name, photoURL);
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
-      toast.success("Signup Successfully")
-
+      toast.success("Signup Successfully");
+      const saveUser = { name: data.name, email: data.email };
+      fetch("http://localhost:5000/users", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(saveUser),
+      })
         .then((res) => res.json())
         .then((data) => console.log(data));
       reset();

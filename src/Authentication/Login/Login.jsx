@@ -16,7 +16,7 @@ const Login = () => {
     reset,
     formState: { errors },
   } = useForm();
-  
+
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
@@ -38,7 +38,7 @@ const Login = () => {
         console.log(loggedUser);
         reset();
         toast.success("Login Successfully");
-         navigate(froms, { replace: true });
+        navigate(froms, { replace: true });
       })
       .catch((error) => {
         console.log(error);
@@ -46,33 +46,32 @@ const Login = () => {
       });
   };
 
-   const handleGoogleSignIn = () => {
-     googleSignIn()
-       .then((result) => {
-         const loginUser = result.user;
-         console.log(loginUser);
-         toast.success("Login Successfully");
-           const saveUser = {
-             name: loginUser.displayName,
-             email: loginUser.email,
-           };
-         fetch("https://eastman-server.vercel.app/users", {
-           method: "POST",
-           headers: {
-             "content-type": "application/json",
-           },
-           body: JSON.stringify(saveUser),
-         })
-           .then((res) => res.json())
-           .then((data) => console.log(data));
-         navigate(froms, { replace: true });
-       })
-       .catch((error) => {
-         console.log(error);
-         toast.error(error.message);
-       });
-   };
-
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const loginUser = result.user;
+        console.log(loginUser);
+        toast.success("Login Successfully");
+        const saveUser = {
+          name: loginUser.displayName,
+          email: loginUser.email,
+        };
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(saveUser),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data));
+        navigate(froms, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(error.message);
+      });
+  };
 
   return (
     <>
