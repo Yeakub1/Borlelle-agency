@@ -56,7 +56,7 @@ const Login = () => {
           name: loginUser.displayName,
           email: loginUser.email,
         };
-        fetch("http://localhost:5000/users", {
+        fetch("https://agency-server-ten.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

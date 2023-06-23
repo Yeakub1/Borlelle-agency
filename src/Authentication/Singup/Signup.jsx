@@ -32,7 +32,7 @@ const Signup = () => {
       const loggedUser = result.user;
       toast.success("Signup Successfully");
       const saveUser = { name: data.name, email: data.email };
-      fetch("http://localhost:5000/users", {
+      fetch("https://agency-server-ten.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
