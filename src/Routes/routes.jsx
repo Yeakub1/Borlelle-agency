@@ -7,6 +7,7 @@ import AboutUs from "../components/Pages/AboutUs/AboutUs/AboutUs";
 import ContactFrom from "../components/Pages/Contact/Contact";
 import Login from "../Authentication/Login/Login";
 import Signup from "../Authentication/Singup/Signup";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -20,9 +21,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <SarvicesDetails />,
+        element: (
+          <PrivateRoutes>
+            <SarvicesDetails />
+          </PrivateRoutes>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://agency-server-ten.vercel.app/services/${params.id}`),
       },
       {
         path: "/about",
