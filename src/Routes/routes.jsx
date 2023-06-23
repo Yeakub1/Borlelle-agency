@@ -5,6 +5,8 @@ import ErrorPage from "../components/Shared/Error/ErrorPage";
 import SarvicesDetails from "../components/Pages/Home/Services/Details/SarvicesDetails";
 import AboutUs from "../components/Pages/AboutUs/AboutUs/AboutUs";
 import ContactFrom from "../components/Pages/Contact/Contact";
+import Login from "../Authentication/Login/Login";
+import Signup from "../Authentication/Singup/Signup";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactFrom />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Signup />,
       },
     ],
   },

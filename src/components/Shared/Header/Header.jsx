@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo/Logo.png";
 import ActiveLink from "../../utility/ActiveLink/ActiveLink";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+      logOut()
+        .then((result) => {})
+        .catch((error) => console.log(error));
+    };
   return (
     <nav className="w-full bg-white shadow ">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex ">
@@ -65,11 +73,6 @@ const Header = () => {
               <ActiveLink to="/about">About</ActiveLink>
             </li>
             <li>
-              <Link className="mr-3" to="/">
-                shop
-              </Link>
-            </li>
-            <li>
               <ActiveLink to="/contact">Contact</ActiveLink>
             </li>
           </ul>
@@ -81,8 +84,13 @@ const Header = () => {
           }`}
         >
           <ul className="items-center justify-center text-lg space-y-8 md:flex md:space-x-6 md:space-y-0 ">
-            {/* {user?.email ? (
+            {user?.email ? (
               <>
+                <li>
+                  <ActiveLink className="mr-3" to="/dashbord/">
+                    Dashbord
+                  </ActiveLink>
+                </li>
                 <li>
                   <button onClick={handleLogOut}>Log out</button>
                 </li>
@@ -100,12 +108,8 @@ const Header = () => {
                 </Link>
               </>
             ) : (
-              <Link to="/login">LogIn</Link>
-            )} */}
-
-            <li>
-              <Link to="/register">Login</Link>
-            </li>
+              <ActiveLink to="/login">LogIn</ActiveLink>
+            )}
           </ul>
         </div>
       </div>

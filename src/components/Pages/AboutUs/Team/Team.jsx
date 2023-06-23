@@ -18,7 +18,7 @@ const Team = () => {
     setTeamData(allData.slice(0, 3));
   };
   useEffect(() => {
-    fetch("http://localhost:5000/team")
+    fetch("https://agency-server-ten.vercel.app/team")
       .then((res) => res.json())
       .then((data) => {
         setTeamData(data.slice(0, 3));
@@ -48,11 +48,17 @@ const Team = () => {
       </div>
       <div className={`flex justify-center mt-10`}>
         {teamData.length === 3 ? (
-          <button onClick={handleSeeAll} className="my-btn">
-            See all Chefs
+          <button
+            onClick={handleSeeAll}
+            className="px-4 py-2 bg-primary text-white rounded-md"
+          >
+            See all Team
           </button>
         ) : (
-          <button onClick={handleSeeLess} className="my-btn">
+          <button
+            onClick={handleSeeLess}
+            className="px-4 py-2 bg-primary text-white rounded-md"
+          >
             See Less
           </button>
         )}
